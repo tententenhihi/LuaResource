@@ -86,6 +86,7 @@ while true do
 
     for i = 40, 1, -1 do
         toast(i)
+        usleep(1000000)
         if not ir.checkHome() then break end
         if i==1 then goto outIR end
     end
