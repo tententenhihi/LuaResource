@@ -4,9 +4,9 @@ bundleVl = ''
 maxSwipeVPN = 9
 
 openApp = function(bdl)
-        toast(bdl.." - chờ 7s", 7)
+        toast(bdl)
 		appRun(bdl)
-        usleep(7000000)
+        usleep(6000000)
 end
 killApp = function() appKill(bundleIr) appKill(bundleVl) end
 
