@@ -4,11 +4,9 @@ bundleVl = ''
 maxSwipeVPN = 9
 
 openApp = function(bdl)
-    repeat
         toast(bdl.." - chờ 7s", 7)
 		appRun(bdl)
         usleep(7000000)
-    until frontMostAppId() == bdl
 end
 killApp = function() appKill(bundleIr) appKill(bundleVl) end
 
@@ -63,10 +61,10 @@ ir = {
     closeAd = function()
         tap(611, 27)
 
-        waiting(6, 'Check Store')
+        waiting(10, 'Check Store')
         checkStore()
 
-        waiting(7, 'Close last ad')
+        waiting(10, 'Close last ad')
         tap(611, 27)
 
         waiting(3, '')
@@ -84,6 +82,7 @@ while true do
     --waiting(3, '')
 
     ::joinIR::
+    toast('join IR')
     openApp(bundleIr)
 
     for i = 40, 1, -1 do
