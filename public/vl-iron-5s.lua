@@ -31,7 +31,7 @@ ir = {
     impr = function() return math.random(6, 8) end, -- số impr chạy
     timeShow = function() return math.random(4,6) end, -- tgian bam show sau khi tắt quảng cáo
     checkHome = function()
-        if (getColor(195,107)==65587) then tap(320,649) usleep(100000) end
+        if (getColor(245,34)==10066329) then tap(320,649) usleep(100000) end
         return getColor(164, 64) == 16777215 and getColor(194, 44) == 196693    
     end,
 
