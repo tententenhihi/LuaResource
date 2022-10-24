@@ -95,7 +95,7 @@ while true do
     for i=60, 1, -1 do
         toast('Check finish ad: '..i)
         usleep(1000000)
-        if ir.isFinishAd() then waiting(8, 'Tap skip') break end
+        if ir.isFinishAd() then waiting(10, 'Tap skip') break end
         if i==1 then goto joinIRLoop end
     end
 
@@ -121,7 +121,7 @@ while true do
         for i=60, 1, -1 do
             toast('Check finish ad: '..i)
             usleep(1000000)
-            if ir.isFinishAd() then waiting(7, 'Tap skip') break end
+            if ir.isFinishAd() then waiting(10, 'Tap skip') break end
             if i==1 then goto continueIR end
         end
 
