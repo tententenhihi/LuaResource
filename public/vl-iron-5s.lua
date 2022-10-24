@@ -31,7 +31,7 @@ ir = {
     impr = function() return math.random(6, 8) end, -- số impr chạy
     timeShow = function() return math.random(4,6) end, -- tgian bam show sau khi tắt quảng cáo
     checkHome = function()
-        if (getColor(143,361)==10066329) then tap(323,654) usleep(100000) end
+        if (getColor(195,107)==65587) and (getColor(161,66)==10066329) then tap(320,649) usleep(100000) end
         return getColor(164, 64) == 16777215 and getColor(194, 44) == 196693    
     end,
 
@@ -62,10 +62,10 @@ ir = {
     closeAd = function()
         tap(611, 27)
 
-        waiting(10, 'Check Store')
+        waiting(9, 'Check Store')
         checkStore()
 
-        waiting(10, 'Close last ad')
+        waiting(9, 'Close last ad')
         tap(611, 27)
 
         waiting(3, '')
@@ -95,7 +95,7 @@ while true do
     for i=60, 1, -1 do
         toast('Check finish ad: '..i)
         usleep(1000000)
-        if ir.isFinishAd() then waiting(10, 'Tap skip') break end
+        if ir.isFinishAd() then waiting(8, 'Tap skip') break end
         if i==1 then goto joinIRLoop end
     end
 
