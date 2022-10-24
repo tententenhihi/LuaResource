@@ -82,10 +82,10 @@ while true do
     --waiting(3, '')
 
     ::joinIR::
-    toast('join IR')
     openApp(bundleIr)
 
     for i = 40, 1, -1 do
+        toast(i)
         if not ir.checkHome() then break end
         if i==1 then goto outIR end
     end
